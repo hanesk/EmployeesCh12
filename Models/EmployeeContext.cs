@@ -19,7 +19,7 @@ namespace EmployeesCh12.Models
             modelBuilder.Entity<DepartmentLocation>().HasKey(d => new {d.DepartmentID, d.LocationID});
 
             //one-to-many relationship between Department and DepartmentLocation
-            modelBuilder.Entity<DepartmentLocation>().HasOne(d1 => d1.Department).WithMany(d => d.DepartmentLocations).HasForeignKey(d1 => d1.LocationID);
+            modelBuilder.Entity<DepartmentLocation>().HasOne(d1 => d1.Department).WithMany(d => d.DepartmentLocations).HasForeignKey(d1 => d1.DepartmentID);
 
             //one-to-many relationship between Location and DepartmentLocation
             modelBuilder.Entity<DepartmentLocation>().HasOne(d1 => d1.Location).WithMany(d => d.DepartmentLocations).HasForeignKey(d1 => d1.LocationID);

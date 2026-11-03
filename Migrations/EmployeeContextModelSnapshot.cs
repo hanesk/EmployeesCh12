@@ -354,7 +354,7 @@ namespace EmployeesCh12.Migrations
                 {
                     b.HasOne("EmployeesCh12.Models.Department", "Department")
                         .WithMany("DepartmentLocations")
-                        .HasForeignKey("LocationID")
+                        .HasForeignKey("DepartmentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
